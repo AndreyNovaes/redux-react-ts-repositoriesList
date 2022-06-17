@@ -3,7 +3,7 @@ import { store } from "../stateRedux/store";
 import RepositoriesList from "./RepositoriesList";
 
 
-const App = () => {
+const Index = () => {
   return (
     <Provider store={store}>
       <div>
@@ -14,4 +14,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Index;

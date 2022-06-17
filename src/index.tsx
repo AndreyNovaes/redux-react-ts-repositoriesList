@@ -1,7 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './Components/App';
+import { ColorModeScript } from "@chakra-ui/react"
+import * as React from "react"
+import * as ReactDOM from "react-dom/client"
+import { App } from "./App"
+import reportWebVitals from "./misc/reportWebVitals"
+import * as serviceWorker from "./misc/serviceWorker"
 
-const root = ReactDOM.render(<App />, document.getElementById('root'));
 
-export default root;
+const container = document.getElementById("root")
+if (!container) throw new Error('Failed to find the root element');
+const root = ReactDOM.createRoot(container)
+
+root.render(
+  <React.StrictMode>
+    <ColorModeScript />
+    <App />
+  </React.StrictMode>,
+)
+
+serviceWorker.unregister()
+
+reportWebVitals()
