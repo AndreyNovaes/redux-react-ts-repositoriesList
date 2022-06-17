@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import { Provider } from "react-redux";
 import { store } from "../stateRedux/store";
 import RepositoriesList from "./RepositoriesList";
@@ -5,12 +6,11 @@ import RepositoriesList from "./RepositoriesList";
 
 const Index = () => {
   return (
-    <Provider store={store}>
-      <div>
-        <h1>Search For a Package</h1>
+    <ChakraProvider>
+      <Provider store={store}>
         <RepositoriesList />
-      </div>
-    </Provider>
+      </Provider>
+    </ChakraProvider>
   );
 }
 
